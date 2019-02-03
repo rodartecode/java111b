@@ -17,7 +17,7 @@ public class PokerHands {
         else if (containsFullHouse(hand)) {
             System.out.println("Full house!");
         }
-        else if (containsStraight()) {
+        else if (containsStraight(hand)) {
             System.out.println("A straight!");
         }
         else if (containsThreeOfaKind(hand)) {
