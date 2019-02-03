@@ -1,0 +1,5 @@
+1. 5 minutes. Checked the original from the assignment a hanful of times.
+2. 4 minutes. Didn't look at the original, but more compilation errors. Went back to check and fix.
+3. 3 minutes. Didn't look, 1 typo
+4. 3 minutes. Didn't look, autocomplete is doing a lot of the work for me now.
+5. 2 m 30s. Typing from memory with autocomplete doing a lot of work.
