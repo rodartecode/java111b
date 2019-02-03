@@ -64,6 +64,7 @@ public class HighScores {
     }
 
     public static void display(ArrayList<String> names, ArrayList<Integer> scores) {
+        System.out.println();
         System.out.println("Top Scorers: ");
         for (int i = 0; i < names.size(); i++) {
             System.out.println(names.get(i) + ": " + scores.get(i));
