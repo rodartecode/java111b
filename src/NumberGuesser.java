@@ -1,59 +1,42 @@
-import java.util.Scanner;
-
-// 02/02/2019
+// 02/03/2019
 // Jesse E Rodarte
 // CS111B
-// Assignment 3: NumberGuesser
+// Assignment 7: OOP Number Guesser
 
 public class NumberGuesser {
-    public static void main(String[] args) {
-        do {
-            playOneGame();
-        } while (shouldPlayAgain());
+    private int lowerBound;
+    private int startingLowerBound;
+    private int upperBound;
+    private int startingUpperBound;
+    private int currentGuess;
+
+    public NumberGuesser(int lower, int upper) {
+        lowerBound = lower;
+        startingLowerBound = lower;
+        upperBound = upper;
+        startingUpperBound = upper;
+        currentGuess = ((lower + upper) / 2);
     }
 
-    public static void playOneGame() {
-        int low = 0;
-        int high = 100;
-        int guess;
-        char response = 'a';
-        boolean again = true;
-        System.out.println("Guess a number between 1 and 100.");
-        while (response != 'c') {
-            guess = getMidpoint(low, high);
-            System.out.print("Is your number " + guess + "? (h/l/c):  ");
-            response = getUserResponseToGuess();
-            if (response == 'h') {
-                low = guess;
-            } else if (response == 'l') {
-                high = guess;
-            }
-        }
-        System.out.println("Hah! I got it!");
+    public void higher() {
+        lowerBound = getCurrentGuess();
+        if (lowerBound == 99)
+            lowerBound++;
+        currentGuess = ((lowerBound + upperBound) / 2);
     }
 
-    public static boolean shouldPlayAgain() {
-        char response;
-        Scanner input = new Scanner(System.in);
-        System.out.print("Do you want to play again? (y/n): ");
-        response = input.next().charAt(0);
-        return (response == 'y');
+    public void lower() {
+        upperBound = getCurrentGuess();
+        currentGuess = ((lowerBound + upperBound) / 2);
     }
 
-    public static char getUserResponseToGuess() {
-        char response;
-        Scanner input = new Scanner(System.in);
-        response = input.next().charAt(0);
-        if (response != 'h' && response != 'l' && response != 'c') {
-            System.out.println("Wrong answer! Now give me a valid response!");
-            System.out.print("(h/l/c)?  ");
-            response = getUserResponseToGuess();
-        }
-
-        return response;
+    public int getCurrentGuess() {
+        return currentGuess;
     }
 
-    public static int getMidpoint(int low, int high) {
-        return (high + low) / 2;
+    public void reset() {
+        lowerBound = startingLowerBound;
+        upperBound = startingUpperBound;
+        currentGuess = ((lowerBound + upperBound) / 2);
     }
 }

@@ -90,3 +90,4 @@ fabric.properties
 .idea/workspace.xml
 *.class
 *.xml
+*.xml___jb_tmp___
