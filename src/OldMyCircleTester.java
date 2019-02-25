@@ -3,11 +3,11 @@
 // CS111B
 // Assignment 6: Circle Class
 
-public class MyCircleTester {
+public class OldMyCircleTester {
     public static void main(String[] args) {
-        MyCircle circle1 = new MyCircle();
-        MyCircle circle2 = new MyCircle();
-        MyCircle circle3 = new MyCircle();
+        OldMyCircle circle1 = new OldMyCircle();
+        OldMyCircle circle2 = new OldMyCircle();
+        OldMyCircle circle3 = new OldMyCircle();
 
         circle1.setRad(1);
         circle1.setX(25);

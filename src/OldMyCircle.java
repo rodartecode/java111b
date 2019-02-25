@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 // CS111B
 // Assignment 6: Circle Class
 
-public class MyCircle {
+public class OldMyCircle {
     private double radius;
     private double x;
     private double y;
@@ -39,8 +39,9 @@ public class MyCircle {
         return area;
     }
 
-    public boolean doesOverlap(MyCircle otherCircle) {
-        double distance = Math.sqrt((otherCircle.getY() - y) * (otherCircle.getY() - y) +
+    public boolean doesOverlap(OldMyCircle otherCircle) {
+        double distance = Math.sqrt(
+                (otherCircle.getY() - y) * (otherCircle.getY() - y) +
                 (otherCircle.getX() - x) * (otherCircle.getX() - x));
 
         return ((radius + otherCircle.getRad()) > distance);

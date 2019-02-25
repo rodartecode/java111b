@@ -4,9 +4,9 @@ import java.util.Scanner;
 // 02/03/2019
 // Jesse E Rodarte
 // CS111B
-// Assignment 5: HighScores
+// Assignment 5: High Scores
 
-public class HighScores {
+public class OldHighScores {
     public static void main(String[] args) {
         do {
             ArrayList<String> names = new ArrayList<>();
