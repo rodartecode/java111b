@@ -18,6 +18,14 @@ public class NumberGuesser {
         currentGuess = ((lower + upper) / 2);
     }
 
+    public NumberGuesser() {
+        lowerBound = 1;
+        startingLowerBound = 1;
+        upperBound = 100;
+        startingUpperBound = 100;
+        currentGuess = 50;
+    }
+
     public void higher() {
         lowerBound = getCurrentGuess();
         if (lowerBound == 99)
