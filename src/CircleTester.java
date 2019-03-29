@@ -24,6 +24,7 @@ public class CircleTester {
         System.out.println("5: " + string3);
         System.out.println();
 
+
         boolean bool1 = circle1.equals(circle4);
         boolean bool2 = circle2.equals(circle6);
 
