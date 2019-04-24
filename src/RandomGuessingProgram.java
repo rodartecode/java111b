@@ -49,6 +49,5 @@ public class RandomGuessingProgram {
         System.out.println(guesser.getCurrentGuess());
         System.out.println(guesser.getCurrentGuess());
         System.out.println(guesser.getCurrentGuess());
-
     }
 }

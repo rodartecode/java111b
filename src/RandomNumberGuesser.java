@@ -1,14 +1,9 @@
 import java.util.Random;
 
 public class RandomNumberGuesser extends NumberGuesser {
-    private int lowerBound;
-    private int startingLowerBound;
-    private int upperBound;
-    private int startingUpperBound;
-    private int currentGuess;
     private boolean guessed;
 
-    public RandomNumberGuesser() {
+    protected RandomNumberGuesser() {
         lowerBound = 1;
         startingLowerBound = 1;
         upperBound = 100;
@@ -17,7 +12,7 @@ public class RandomNumberGuesser extends NumberGuesser {
         currentGuess = getCurrentGuess();
     }
 
-    public RandomNumberGuesser(int lower, int upper) {
+    protected RandomNumberGuesser(int lower, int upper) {
         lowerBound = lower;
         startingLowerBound = lower;
         upperBound = upper;
@@ -28,14 +23,14 @@ public class RandomNumberGuesser extends NumberGuesser {
 
     public void higher() {
         lowerBound = currentGuess;
-        if (lowerBound == (upperBound -1))
+        if (lowerBound == (upperBound - 1))
             lowerBound++;
         guessed = true;
         currentGuess = getCurrentGuess();
     }
 
     public void lower() {
-        upperBound = currentGuess;
+        upperBound = currentGuess - 1;
         guessed = true;
         currentGuess = getCurrentGuess();
     }

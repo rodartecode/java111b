@@ -4,13 +4,13 @@
 // Assignment 7: OOP Number Guesser
 
 public class NumberGuesser {
-    private int lowerBound;
-    private int startingLowerBound;
-    private int upperBound;
-    private int startingUpperBound;
-    private int currentGuess;
+    protected int lowerBound;
+    protected int startingLowerBound;
+    protected int upperBound;
+    protected int startingUpperBound;
+    protected int currentGuess;
 
-    public NumberGuesser(int lower, int upper) {
+    protected NumberGuesser(int lower, int upper) {
         lowerBound = lower;
         startingLowerBound = lower;
         upperBound = upper;
@@ -18,7 +18,7 @@ public class NumberGuesser {
         currentGuess = ((lower + upper) / 2);
     }
 
-    public NumberGuesser() {
+    protected NumberGuesser() {
         lowerBound = 1;
         startingLowerBound = 1;
         upperBound = 100;
@@ -26,23 +26,23 @@ public class NumberGuesser {
         currentGuess = 50;
     }
 
-    public void higher() {
+    protected void higher() {
         lowerBound = getCurrentGuess();
         if (lowerBound == 99)
             lowerBound++;
         currentGuess = ((lowerBound + upperBound) / 2);
     }
 
-    public void lower() {
+    protected void lower() {
         upperBound = getCurrentGuess();
         currentGuess = ((lowerBound + upperBound) / 2);
     }
 
-    public int getCurrentGuess() {
+    protected int getCurrentGuess() {
         return currentGuess;
     }
 
-    public void reset() {
+    protected void reset() {
         lowerBound = startingLowerBound;
         upperBound = startingUpperBound;
         currentGuess = ((lowerBound + upperBound) / 2);
